@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import connectDB from '@/lib/mongoose'
 import Todo from '@/models/Todo'
+import { MongooseError } from 'mongoose'
 
 // GET: 모든 투두 조회
 export async function GET() {
@@ -13,6 +14,11 @@ export async function GET() {
       ...todo,
       _id: todo._id.toString()
     }))
+
+    console.log("====================================")
+    console.log("APP_ENV ::::: ", process.env.APP_ENV)
+    console.log("NEXT_PUBLIC_APP_ENV ::::: ", process.env.NEXT_PUBLIC_APP_ENV)
+    console.log("====================================")
     
     return NextResponse.json({ todos: formattedTodos }, { status: 200 })
   } catch (error) {
