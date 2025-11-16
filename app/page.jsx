@@ -103,7 +103,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-xl p-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center flex items-center justify-center gap-3">
             <img src="/todo-icon.svg" alt="logo" width={40} height={40} />
-            <span>Todo App 1</span>
+            <span>Todo App 2</span>
             <div>{process.env.NEXT_PUBLIC_APP_ENV}</div>
           </h1>
           
