@@ -10,6 +10,7 @@ export async function GET() {
     await connectDB()
     const todos = await Todo.find({}).sort({ createdAt: -1 }).lean()
 
+    const test = "test"
     console.log("모든 TODO를 조회했습니다.") 
     logger.info("모든 TODO를 조회했습니다.")
 
