@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 import connectDB from '@/lib/mongoose'
 import Todo from '@/models/Todo'
-import { MongooseError } from 'mongoose'
 
 // GET: 모든 투두 조회
 export async function GET() {
